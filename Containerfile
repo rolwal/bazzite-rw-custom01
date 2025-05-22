@@ -3,10 +3,13 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-#FROM ghcr.io/ublue-os/bazzite:stable
 FROM ghcr.io/ublue-os/bazzite-nvidia-open:stable
+LABEL org.opencontainers.image.authors=rolwal@cantor
+LABEL org.opencontainers.image.title=bazzite-rw-custom01:latest
+LABEL org.opencontainers.image.description="This is a modified bazzite image containing virt-viewer, htop, iotop-c and ps-acct"
 
 ## Other possible base images include:
+# FROM ghcr.io/ublue-os/bazzite:stable
 # FROM ghcr.io/ublue-os/bazzite:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
 # 
